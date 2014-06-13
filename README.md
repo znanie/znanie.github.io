@@ -1,0 +1,4 @@
+staticbl
+========
+
+static blog generator
