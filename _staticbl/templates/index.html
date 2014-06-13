@@ -1,0 +1,14 @@
+{% extends "templates/base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<h2>{{ site_name }}</h2>
+
+<ul>
+{% for p in pages %}
+	<li><a href="/{{ p.path }}">{{ p.meta['title'] }}</a> {{ p.meta['date'].strftime('%d-%m-%Y %H:%M') }} </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

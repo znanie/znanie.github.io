@@ -1,0 +1,14 @@
+{% extends "templates/base.html" %}
+
+{% block title %}Top Tags{% endblock %}
+
+{% block content %}
+<h2>{{ site_name }} Top Tags</h2>
+
+<ul>
+{% for t,cnt in tags %}
+	<li><a href="/tag/{{ t }}.html">{{ t }}</a> - {{ cnt }} posts</li>
+{% endfor %}
+</ul>
+
+{% endblock %}

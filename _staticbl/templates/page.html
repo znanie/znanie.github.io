@@ -1,0 +1,17 @@
+{% extends "templates/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h2>{{ title }}</h2>
+{% if date %}<small>{{ date.strftime('%d-%m-%Y %H:%M') }}</small>{% endif %}
+{{ content }}
+
+{% if tags %}
+tags:
+{% for t in tags %}
+	<a href="/tag/{{ t }}.html">{{ t }}</a> 
+{% endfor %}
+{% endif %}
+
+{% endblock %}
